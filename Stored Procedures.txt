@@ -107,6 +107,12 @@ select * from AirlineCompanies where ID = @id
 
 GO
 
+CREATE PROCEDURE GET_AIRLINE_BY_AIRLINE_NAME @airlineName nvarchar(50)
+AS
+SELECT * from AirlineCompanies where AIRLINE_NAME = @airlineName
+
+GO
+
 CREATE PROCEDURE GET_AIRLINE_BY_USERNAME @userName nvarchar(50)
 AS
 select * from AirlineCompanies where USER_NAME = @userName

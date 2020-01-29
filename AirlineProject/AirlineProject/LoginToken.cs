@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace AirlineProject
 {
-    public interface ICountryDAO : IBasicDB<Country>
+    public class LoginToken<T> where T : IUser
     {
+        public T User { get; set; }
     }
 }

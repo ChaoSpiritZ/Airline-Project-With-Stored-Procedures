@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AirlineProject
 {
-    interface IUser
+    public interface IUser
     {
     }
 }

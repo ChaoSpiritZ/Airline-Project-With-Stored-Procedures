@@ -8,11 +8,11 @@ namespace AirlineProject
 {
     public abstract class FacadeBase
     {
-        protected AirlineDAOMSSQL _airlineDAO;
-        protected CountryDAOMSSQL _countryDAO;
-        protected CustomerDAOMSSQL _customerDAO;
-        protected FlightDAOMSSQL _flightDAO;
-        protected TicketDAOMSSQL _ticketDAO;
+        protected IAirlineDAO _airlineDAO;
+        protected ICountryDAO _countryDAO;
+        protected ICustomerDAO _customerDAO;
+        protected IFlightDAO _flightDAO;
+        protected ITicketDAO _ticketDAO;
         
         public FacadeBase()
         {

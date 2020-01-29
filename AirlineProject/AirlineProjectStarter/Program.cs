@@ -80,6 +80,10 @@ namespace AirlineProjectStarter
             Console.WriteLine(TFF.GetAirlineByUsername("CCCRASh"));
             Console.WriteLine("");
 
+            Console.WriteLine("getting airline company with name - delta");
+            Console.WriteLine(TFF.GetAirlineByAirlineName("delta"));
+            Console.WriteLine("");
+
             Console.WriteLine("getting all airline companies by country id 3:");
             airlineCompanies = TFF.GetAllAirlinesByCountry(3);
             airlineCompanies.ToList().ForEach(ac => Console.WriteLine(ac));

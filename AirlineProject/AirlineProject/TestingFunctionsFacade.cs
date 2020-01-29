@@ -21,6 +21,12 @@ namespace AirlineProject
             return airlineCompany;
         }
 
+        public AirlineCompany GetAirlineByAirlineName(string name)
+        {
+            AirlineCompany airlineCompany = _airlineDAO.GetAirlineByAirlineName(name);
+            return airlineCompany;
+        }
+
         public AirlineCompany GetAirlineByUsername(string name)
         {
             AirlineCompany airlineCompany = _airlineDAO.GetAirlineByUsername(name);

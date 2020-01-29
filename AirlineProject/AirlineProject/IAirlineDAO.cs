@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace AirlineProject
 {
-    interface IAirlineDAO : IBasicDB<AirlineCompany>
+    public interface IAirlineDAO : IBasicDB<AirlineCompany>
     {
+        AirlineCompany GetAirlineByAirlineName(string name);
         AirlineCompany GetAirlineByUsername(string name);
         IList<AirlineCompany> GetAllAirlinesByCountry(long countryId);
     }

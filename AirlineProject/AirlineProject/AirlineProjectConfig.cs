@@ -8,6 +8,6 @@ namespace AirlineProject
 {
     public static class AirlineProjectConfig
     {
-        public static string CONNECTION_STRING = @"Data Source=DESKTOP-JJ6DFK2;Initial Catalog=AirlineProject;Integrated Security=True";
+        public const string CONNECTION_STRING = @"Data Source=DESKTOP-JJ6DFK2;Initial Catalog=AirlineProject;Integrated Security=True";
     }
 }

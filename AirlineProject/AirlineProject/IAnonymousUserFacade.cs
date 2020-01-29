@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace AirlineProject
 {
-    public interface IFlightDAO : IBasicDB<Flight>
+    public interface IAnonymousUserFacade
     {
+        IList<AirlineCompany> GetAllAirlineCompanies();
+        IList<Flight> GetAllFlights();
         Dictionary<Flight, int> GetAllFlightsVacancy();
-        //Flight GetFlightById(int id);
-        IList<Flight> GetFlightsByCustomer(Customer customer);
+        Flight GetFlight(long id);
         IList<Flight> GetFlightsByDepartureDate(DateTime departureDate);
         IList<Flight> GetFlightsByDestinationCountry(long countryCode);
         IList<Flight> GetFlightsByLandingDate(DateTime landingDate);

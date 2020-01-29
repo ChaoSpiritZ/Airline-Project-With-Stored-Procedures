@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AirlineProject
 {
-    interface ITicketDAO : IBasicDB<Ticket>
+    public interface ITicketDAO : IBasicDB<Ticket>
     {
     }
 }

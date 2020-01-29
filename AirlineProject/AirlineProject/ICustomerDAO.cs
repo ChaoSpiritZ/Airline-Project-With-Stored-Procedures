@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AirlineProject
 {
-    interface ICustomerDAO : IBasicDB<Customer>
+    public interface ICustomerDAO : IBasicDB<Customer>
     {
         Customer GetCustomerByUsername(string name);
     }

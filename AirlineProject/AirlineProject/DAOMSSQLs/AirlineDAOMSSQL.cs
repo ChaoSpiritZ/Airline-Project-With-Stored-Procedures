@@ -58,6 +58,36 @@ namespace AirlineProject
             }
         }
 
+        public AirlineCompany GetAirlineByAirlineName(string name)
+        {
+            using (SqlConnection con = new SqlConnection(AirlineProjectConfig.CONNECTION_STRING))
+            {
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand("GET_AIRLINE_BY_AIRLINE_NAME", con))
+                {
+                    cmd.Parameters.AddWithValue("@airlineName", name);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            AirlineCompany airlineCompany = new AirlineCompany()
+                            {
+                                ID = (long)reader["ID"],
+                                AirlineName = (string)reader["AIRLINE_NAME"],
+                                UserName = (string)reader["USER_NAME"],
+                                Password = (string)reader["PASSWORD"],
+                                CountryCode = (long)reader["COUNTRY_CODE"]
+                            };
+                            return airlineCompany;
+                        }
+                        return null;
+                    }
+                }
+            }
+        }
+
         public AirlineCompany GetAirlineByUsername(string name)
         {
             using (SqlConnection con = new SqlConnection(AirlineProjectConfig.CONNECTION_STRING))

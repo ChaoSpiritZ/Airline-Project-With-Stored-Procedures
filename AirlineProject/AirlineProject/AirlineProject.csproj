@@ -45,6 +45,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrator.cs" />
+    <Compile Include="MyExceptions\AirlineNameAlreadyExistsException.cs" />
+    <Compile Include="AnonymousUserFacade.cs" />
+    <Compile Include="MyExceptions\EmptyTokenException.cs" />
+    <Compile Include="IAnonymousUserFacade.cs" />
+    <Compile Include="ILoggedInAdministratorFacade.cs" />
+    <Compile Include="ILoggedInAirlineFacade.cs" />
+    <Compile Include="ILoggedInCustomerFacade.cs" />
+    <Compile Include="ILoginService.cs" />
+    <Compile Include="LoggedInAdministratorFacade.cs" />
+    <Compile Include="LoggedInAirlineFacade.cs" />
+    <Compile Include="LoggedInCustomerFacade.cs" />
+    <Compile Include="LoginHelper.cs" />
+    <Compile Include="LoginService.cs" />
+    <Compile Include="LoginToken.cs" />
     <Compile Include="POCOs\AirlineCompany.cs" />
     <Compile Include="DAOMSSQLs\AirlineDAOMSSQL.cs" />
     <Compile Include="AirlineProjectConfig.cs" />
@@ -67,6 +82,9 @@
     <Compile Include="TestingFunctionsFacade.cs" />
     <Compile Include="POCOs\Ticket.cs" />
     <Compile Include="DAOMSSQLs\TicketDAOMSSQL.cs" />
+    <Compile Include="MyExceptions\UsernameAlreadyExistsException.cs" />
+    <Compile Include="MyExceptions\UserNotFoundException.cs" />
+    <Compile Include="MyExceptions\WrongPasswordException.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

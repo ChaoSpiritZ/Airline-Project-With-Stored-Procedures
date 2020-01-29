@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AirlineProject
 {
-    public interface ICountryDAO : IBasicDB<Country>
+    public class Administrator : IUser
     {
     }
 }

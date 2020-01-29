@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AirlineProject
 {
-    interface IBasicDB<T> where T : IPoco
+    public interface IBasicDB<T> where T : IPoco
     {
         void Add(T t);
         T Get(long id);
